@@ -4,6 +4,7 @@ const { Produk, Produsen }= models
 module.exports = {
     produkA: async (req, res) => {
         const data = await Produk.findAll({include : Produsen})
+        //adalah perintah untuk mengambil semua data produk, termasuk data produsennya/
         res.status(200).json({
             message: "success",
             data: data
